@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&family=Unbounded:wght@400;500&display=swap");
+
+// font-family: 'Rubik', sans-serif;
+// font-family: 'Unbounded', sans-serif;
+
+$font-base: "Rubik", sans-serif;
+$font-heading: "Unbounded", sans-serif;
+
+%typo-heading {
+  font-family: $font-heading;
+  font-weight: 400;
+  line-height: 98%;
+}
+
+%typo-body {
+  font-family: $font-base;
+  line-height: 140%;
+  letter-spacing: 0.25px;
+}
+%typo-body-regular {
+  @extend %typo-body;
+  font-weight: 400;
+}
+%typo-body-medium {
+  @extend %typo-body;
+  font-weight: 500;
+}
+
+.typo-heading-4xl {
+  @extend %typo-heading;
+  font-size: 9rem;
+  letter-spacing: -2px;
+}
+.typo-heading-3xl {
+  @extend %typo-heading;
+  font-size: 7.2rem;
+  letter-spacing: -2px;
+}
+.typo-heading-2xl {
+  @extend %typo-heading;
+  font-size: 6.4rem;
+  letter-spacing: -2px;
+}
+.typo-heading-xl {
+  @extend %typo-heading;
+  font-size: 4.8rem;
+}
+.typo-heading-lg {
+  @extend %typo-heading;
+  font-size: 4rem;
+}
+.typo-heading-md {
+  @extend %typo-heading;
+  font-size: 3.2rem;
+}
+.typo-heading-sm {
+  @extend %typo-heading;
+  font-size: 2.4rem;
+}
+.typo-heading-xs {
+  @extend %typo-heading;
+  font-size: 2rem;
+}
+
+.typo-body-lg-regular {
+  @extend %typo-body-regular;
+  font-size: 1.8rem;
+}
+.typo-body-lg-medium {
+  @extend %typo-body-medium;
+  font-size: 1.8rem;
+}
+.typo-body-md-regular {
+  @extend %typo-body-regular;
+  font-size: 1.6rem;
+}
+.typo-body-md-medium {
+  @extend %typo-body-medium;
+  font-size: 1.6rem;
+}
+.typo-body-sm-regular {
+  @extend %typo-body-regular;
+  font-size: 1.4rem;
+}
+.typo-body-sm-medium {
+  @extend %typo-body-medium;
+  font-size: 1.4rem;
+}
+.typo-body-xs-regular {
+  @extend %typo-body-regular;
+  font-size: 1.2rem;
+}
+.typo-body-xs-medium {
+  @extend %typo-body-medium;
+  font-size: 1.2rem;
+}
+
+.typo-color-accent {
+  color: var(--color-accent-300);
+}

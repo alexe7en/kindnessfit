@@ -1,0 +1,50 @@
+$colors: (
+  color-bg-dark-primary: #111111,
+  color-bg-dark-secondary: #191919,
+  color-bg-light-primary: #faf9f6,
+  color-bg-light-secondary: #dbe0d1,
+
+  color-text-light-primary: #ffffff,
+  color-text-light-secondary: #b7bcae,
+  color-text-dark-primary: #000000,
+
+  color-gray-100: #848484,
+  color-gray-200: #6c6c6c,
+  color-gray-300: #404040,
+  color-gray-400: #222222,
+  color-gray-500: #101010,
+
+  color-accent-100: #ebffc4,
+  color-accent-200: #d0ff75,
+  color-accent-300: #c2ff4e,
+  color-accent-400: #a8ff04,
+  color-accent-500: #79b900,
+);
+
+@function hexToRGB($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
+
+@mixin generate_colors($colors) {
+  // Colors
+  @each $color, $value in $colors {
+    @if str-slice(#{$value}, 1, 1) == "#" {
+      --#{$color}: #{$value};
+    } @else {
+      --#{$color}: var(--#{$value});
+    }
+  }
+
+  // RGB Colors
+  @each $color, $value in $colors {
+    @if str-slice(#{$value}, 1, 1) == "#" {
+      --RGB_#{$color}: #{hexToRGB($value)};
+    } @else {
+      --RGB_#{$color}: var(--RGB_#{$value});
+    }
+  }
+}
+
+:root {
+  @include generate_colors($colors);
+}

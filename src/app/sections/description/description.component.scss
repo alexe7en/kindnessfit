@@ -1,0 +1,44 @@
+.description {
+  position: relative;
+  &__bg {
+    position: absolute;
+    top: 25vh;
+    right: 3rem;
+  }
+  &-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    &__icon {
+      width: 4.8rem;
+      margin-bottom: 2.4rem;
+    }
+  }
+}
+
+.match-section {
+  height: 100vh;
+  padding: 3.2rem;
+}
+
+.match {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-accent-300);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  &__main {
+    width: 80%;
+    margin: 0 auto;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--color-text-dark-primary);
+    span {
+      font-weight: 500;
+    }
+  }
+}

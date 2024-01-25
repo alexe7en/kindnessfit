@@ -1,0 +1,29 @@
+.navigation {
+  position: fixed;
+  bottom: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  padding: 0.8rem 0.8rem 0.8rem 2.4rem;
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+
+  background-color: rgba(var(--RGB_color-gray-400), 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 100px;
+  &__link {
+    color: rgba(var(--RGB_color-text-light-primary), 0.7);
+  }
+}
+
+.navigation-btn {
+  height: 4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+  background-color: var(--color-accent-300);
+  color: var(--color-text-dark-primary);
+  border-radius: 100px;
+}
