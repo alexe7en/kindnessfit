@@ -471,7 +471,6 @@ export class DescriptionMatchLineComponent implements AfterViewInit {
         start: 'top 20%',
         end: '80% 80%',
         scrub: 2,
-        markers: true,
       },
     });
   }
